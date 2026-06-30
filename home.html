@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tong Ek Jewelry - Dashboard Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ba1a1a",
+                    "primary-container": "#d4af37",
+                    "inverse-primary": "#e9c349",
+                    "surface-variant": "#e4e2e2",
+                    "on-primary-fixed-variant": "#574500",
+                    "error-container": "#ffdad6",
+                    "surface-container": "#efeded",
+                    "surface-container-low": "#f5f3f3",
+                    "secondary": "#5f5e5e",
+                    "on-primary-container": "#554300",
+                    "surface-container-high": "#e9e8e7",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "surface-dim": "#dbdad9",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed": "#e2e2e2",
+                    "background": "#fbf9f9",
+                    "surface": "#fbf9f9",
+                    "surface-container-highest": "#e4e2e2",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "on-primary-fixed": "#241a00",
+                    "inverse-on-surface": "#f2f0f0",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "surface-tint": "#735c00",
+                    "on-tertiary-container": "#434546",
+                    "on-background": "#1b1c1c",
+                    "on-secondary-fixed-variant": "#474746",
+                    "outline": "#7f7663",
+                    "tertiary": "#5d5f5f",
+                    "on-surface-variant": "#4d4635",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1b1c1c",
+                    "tertiary-container": "#b2b3b3",
+                    "inverse-surface": "#303031",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#ffe088",
+                    "secondary-fixed": "#e5e2e1",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "outline-variant": "#d0c5af",
+                    "on-secondary-container": "#636262",
+                    "surface-bright": "#fbf9f9",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "secondary-container": "#e2dfde",
+                    "on-primary": "#ffffff",
+                    "primary": "#735c00",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "16px",
+                    "xl": "24px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "margin-desktop": "40px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "container-padding": "32px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "title-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #fbf9f9; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .ambient-shadow { box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
+        .gold-gradient { background: linear-gradient(135deg, #d4af37 0%, #735c00 100%); }
+        .hover-lift { transition: all 0.2s ease-out; }
+        .hover-lift:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
+        .table-row-hover:hover { background-color: #f5f3f3; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #d0c5af; border-radius: 10px; }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- Side Navigation Bar -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r border-outline-variant bg-surface-container-lowest z-50 flex flex-col py-base shadow-sm">
+<div class="px-6 py-8 flex items-center gap-3">
+<div class="w-10 h-10 gold-gradient rounded-lg flex items-center justify-center text-white shadow-md">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>atm</span>
+</div>
+<div>
+<h1 class="font-title-md text-title-md text-primary leading-tight">Tong Ek Jewelry</h1>
+<p class="text-[10px] uppercase tracking-widest text-secondary font-bold">Inventory Management</p>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-1 mt-4">
+<a class="flex items-center gap-3 px-4 py-3 text-primary font-bold border-r-4 border-primary bg-surface-container-high rounded-sm transition-all" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-secondary hover:text-primary hover:bg-surface-container-low transition-all duration-200" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-label-md text-label-md">Reports</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-secondary hover:text-primary hover:bg-surface-container-low transition-all duration-200" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-label-md text-label-md">Users</span>
+</a>
+</nav>
+<div class="px-4 py-6 border-t border-surface-variant">
+<div class="flex items-center gap-3 px-4">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a high-end luxury jewelry administrator in a minimalist office setting with soft gold lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMVqOUuup9Qs6fu4bbYrTtIeKouh8yFVpwC8bq-7_L-DLPU8_FXBWKYurxVuN1p95LkUVrVyb8BnVCLK_FJ1IQUc5yhZOV5XeDC6qai2oe2qlU-ZmLCPNnyIYqaKjnJeb6sIn6q5JtftNu1th2kp5euhfxYLi5Ysv55o0QaWm4Twx1RcyazqIB4YVWiQ667ckHX_tn1lvP2rJm7bWlhzxHKw1WzIewNZHzukYafy6FhuNlOrvN3by-ToHo04ECiKAfcU-7qq0Diw"/>
+</div>
+<div>
+<p class="text-label-md font-bold text-on-surface">Administrator</p>
+<p class="text-[10px] text-secondary">System Admin</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen">
+<!-- Top App Bar -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 bg-surface border-b border-surface-variant z-40 flex justify-between items-center px-margin-desktop shadow-sm">
+<div class="flex items-center w-1/2">
+<div class="relative w-full max-w-md group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-full text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-primary transition-all" placeholder="Search inventory, SKU, or staff..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-secondary hover:bg-surface-container-high rounded-full transition-all relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full border-2 border-surface"></span>
+</button>
+<button class="p-2 text-secondary hover:bg-surface-container-high rounded-full transition-all">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</header>
+<!-- Scrollable Canvas -->
+<div class="pt-24 pb-12 px-margin-desktop max-w-[1440px] mx-auto">
+<!-- Page Header -->
+<div class="mb-8 flex justify-between items-end">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">หน้าแรก</h2>
+<p class="text-body-lg text-secondary">Real-time status of the collection.</p>
+</div>
+<button class="px-6 py-2 gold-gradient text-white font-bold rounded-lg shadow-md hover:scale-[1.02] active:scale-95 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-base">add</span>
+<span class="">Add New Product</span>
+</button>
+</div>
+<!-- Summary Cards (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-12">
+<div class="bg-surface-container-lowest p-6 rounded-lg ambient-shadow border-t-4 border-primary hover-lift">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-primary-container/10 rounded-lg text-primary">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>inventory_2</span>
+</div>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-tighter">Total Products</span>
+</div>
+<div class="text-display-lg font-display-lg leading-none">1,284</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg ambient-shadow border-t-4 border-secondary hover-lift">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-secondary-container rounded-lg text-secondary">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>camera_alt</span>
+</div>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-tighter">ถ่ายเสร็จแล้ว<br/></span>
+</div>
+<div class="text-display-lg font-display-lg leading-none">842</div>
+<div class="mt-2 text-label-md text-secondary">65% completion</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg ambient-shadow border-t-4 border-error hover-lift">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-error-container/20 rounded-lg text-error">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>pending_actions</span>
+</div>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-tighter">ยังไม่ได้ถ่าย<br/></span>
+</div>
+<div class="text-display-lg font-display-lg leading-none">312</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg ambient-shadow border-t-4 border-green-600 hover-lift">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-green-50 rounded-lg text-green-600">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>cloud_done</span>
+</div>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-tighter"><span class="" style="color: rgb(21, 128, 61); letter-spacing: normal; background-color: rgb(240, 253, 244);">อัปโหลดเว็บไซต์แล้ว</span></span>
+</div>
+<div class="text-display-lg font-display-lg leading-none">130</div>
+<div class="mt-2 text-label-md text-green-600"><br/></div>
+</div>
+</div>
+<!-- Recent Product Tracking Table -->
+<section class="bg-surface-container-lowest rounded-lg ambient-shadow overflow-hidden border border-surface-variant">
+<div class="px-container-padding py-6 border-b border-surface-variant flex justify-between items-center">
+<h3 class="font-title-md text-title-md text-on-surface"><div class="">Product Tracking</div></h3>
+<div class="flex gap-2">
+<button class="px-4 py-1.5 border border-outline-variant rounded-full text-body-sm hover:bg-surface-container transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-body-sm">filter_list</span>
+                            Filter
+                        </button>
+<button class="px-4 py-1.5 border border-outline-variant rounded-full text-body-sm hover:bg-surface-container transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-body-sm">download</span>
+                            Export CSV
+                        </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead class="bg-surface-container-low border-b border-surface-variant">
+<tr><th class="px-6 py-4 font-label-md text-label-md text-secondary uppercase tracking-wider">SKU (รหัสสินค้า)</th>
+<th class="px-6 py-4 font-label-md text-label-md text-secondary uppercase tracking-wider">PRODUCT NAME (ชื่อสินค้า)</th>
+<th class="px-6 py-4 font-label-md text-label-md text-secondary uppercase tracking-wider">CATEGORY (หมวดหมู่)</th>
+<th class="px-6 py-4 font-label-md text-label-md text-secondary uppercase tracking-wider">STATUS (สถานะ)</th>
+<th class="px-6 py-4 font-label-md text-label-md text-secondary uppercase tracking-wider">LAST UPDATED (แก้ไขล่าสุด)</th>
+<th class="px-6 py-4 font-label-md text-label-md text-secondary uppercase tracking-wider">ASSIGNED TO (ผู้รับผิดชอบ)</th>
+<th class="px-6 py-4 font-label-md text-label-md text-secondary uppercase tracking-wider text-right">ACTION</th></tr>
+</thead>
+<tbody class="divide-y divide-surface-variant">
+<!-- Product Row 1 -->
+<tr class="table-row-hover transition-colors">
+<td class="px-6 py-4 font-bold text-on-surface">TK-00124</td>
+<td class="px-6 py-4 text-body-sm">แหวนมังกรทองคำแท้ 96.5%</td>
+<td class="px-6 py-4 text-body-sm">แหวน </td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase bg-green-50 text-green-700 flex items-center w-fit gap-1.5">
+<span class="w-2 h-2 rounded-full bg-green-600"></span>
+                                        อัปโหลดเว็บไซต์แล้ว
+                                    </span>
+</td>
+<td class="px-6 py-4 text-body-sm text-secondary">24 Oct, 14:20</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary-container/20 text-[10px] flex items-center justify-center font-bold text-primary">SN</div>
+<span class="text-body-sm">Somchai N.</span>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="p-2 text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">edit</span>
+</button>
+</td>
+</tr>
+<!-- Product Row 2 -->
+<tr class="table-row-hover transition-colors">
+<td class="px-6 py-4 font-bold text-on-surface">TK-00125</td>
+<td class="px-6 py-4 text-body-sm">สร้อยคอลายดอกพิกุลทอง</td>
+<td class="px-6 py-4 text-body-sm">สร้อยคอ </td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase bg-orange-50 text-orange-700 flex items-center w-fit gap-1.5">
+<span class="w-2 h-2 rounded-full bg-orange-500"></span>
+                                        ถ่ายภาพแล้ว
+                                    </span>
+</td>
+<td class="px-6 py-4 text-body-sm text-secondary">25 Oct, 09:45</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-blue-100 text-[10px] flex items-center justify-center font-bold text-blue-700">AK</div>
+<span class="text-body-sm">Ananya K.</span>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="p-2 text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">edit</span>
+</button>
+</td>
+</tr>
+<!-- Product Row 3 -->
+<tr class="table-row-hover transition-colors">
+<td class="px-6 py-4 font-bold text-on-surface">TK-00126</td>
+<td class="px-6 py-4 text-body-sm">กำไลหยกประดับทองคำ</td>
+<td class="px-6 py-4 text-body-sm">กำไล (Bracelets)</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase bg-red-50 text-red-700 flex items-center w-fit gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+                                        ยังไม่ได้ถ่ายภาพ
+                                    </span>
+</td>
+<td class="px-6 py-4 text-body-sm text-secondary">25 Oct, 11:10</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-purple-100 text-[10px] flex items-center justify-center font-bold text-purple-700">PW</div>
+<span class="text-body-sm">Preecha W.</span>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="p-2 text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">edit</span>
+</button>
+</td>
+</tr>
+<!-- Product Row 4 -->
+<tr class="table-row-hover transition-colors">
+<td class="px-6 py-4 font-bold text-on-surface">TK-00127</td>
+<td class="px-6 py-4 text-body-sm">ต่างหูพิกุลประดับเพชร</td>
+<td class="px-6 py-4 text-body-sm">ต่างหู (Earrings)</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase bg-green-50 text-green-700 flex items-center w-fit gap-1.5">
+<span class="w-2 h-2 rounded-full bg-green-600"></span>
+                                        อัปโหลดเว็บไซต์แล้ว
+                                    </span>
+</td>
+<td class="px-6 py-4 text-body-sm text-secondary">26 Oct, 10:00</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary-container/20 text-[10px] flex items-center justify-center font-bold text-primary">SN</div>
+<span class="text-body-sm">Somchai N.</span>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="p-2 text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">edit</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="px-container-padding py-4 border-t border-surface-variant flex justify-between items-center">
+<p class="text-body-sm text-secondary">Showing 1 to 4 of 1,284 entries</p>
+<div class="flex gap-1"><button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container transition-all text-secondary">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container transition-all text-secondary font-bold">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container transition-all text-secondary font-bold">3</button>
+<div class="w-10 h-10 flex items-center justify-center text-secondary">...</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container transition-all text-secondary font-bold">20</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container transition-all text-secondary">
+<span class="material-symbols-outlined">chevron_right</span>
+</button></div></div></section></div></main>
+</body></html>
