@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
-<head>
+
+<html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Login | Tong Ek Jewelry Inventory Management</title>
 <!-- Google Fonts: Inter for professional typography -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <!-- Material Symbols for iconography -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <!-- Shared Style Guidance & Tailwind Config -->
 <script id="tailwind-config">
@@ -126,27 +127,6 @@
             transform: translateY(0px);
             filter: brightness(0.95);
         }
-        
-        .ripple {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.3);
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-            border-radius: 50%;
-            animation: ripple-animation 0.6s linear;
-        }
-        @keyframes ripple-animation {
-            from {
-                width: 0px;
-                height: 0px;
-                opacity: 0.5;
-            }
-            to {
-                width: 500px;
-                height: 500px;
-                opacity: 0;
-            }
-        }
     </style>
 </head>
 <body class="bg-background font-body-lg text-on-background min-h-screen flex flex-col items-center justify-center p-margin-mobile md:p-margin-desktop">
@@ -155,21 +135,20 @@
 <!-- Logo Section -->
 <div class="flex flex-col items-center mb-10">
 <div class="w-24 h-24 mb-6 rounded-full overflow-hidden bg-white luxury-shadow flex items-center justify-center border border-outline-variant/30">
-<img class="w-20 h-20 object-contain" data-alt="Tong Ek Jewelry Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLqv3POIO6Z5Pdv0rIehITp6jY3JK7u2M65O6UpycY33hviq3PT3bZ8KZlOp1xC_DZ-98aJh17gfoFPcTkpx-zR54adi3ImUYoHuQrUHzScbNivFjT4bgQVd61YLZF7Gn37EzV888qZigehI8fvHHW-5WKMZJS56iPTjXw2l103OuZhA2L3DrbKTjI2YcHdzd5TrScu4UACBKkz90fqA090I2S3vGLF01imgYaU4lb18Xpi5TPGiL639DI3xIwX4UXHKu2cW9Udw"/>
+<img class="w-20 h-20 object-contain" data-alt="A macro photograph of a prestigious gold coin emblem featuring the initials ATM embossed in elegant serif typography. The lighting is soft and cinematic, casting delicate reflections on the polished yellow gold surface. The background is a clean, neutral white, emphasizing the luxury and artisanal precision of the jewelry brand's identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLqv3POIO6Z5Pdv0rIehITp6jY3JK7u2M65O6UpycY33hviq3PT3bZ8KZlOp1xC_DZ-98aJh17gfoFPcTkpx-zR54adi3ImUYoHuQrUHzScbNivFjT4bgQVd61YLZF7Gn37EzV888qZigehI8fvHHW-5WKMZJS56iPTjXw2l103OuZhA2L3DrbKTjI2YcHdzd5TrScu4UACBKkz90fqA090I2S3vGLF01imgYaU4lb18Xpi5TPGiL639DI3xIwX4UXHKu2cW9Udw"/>
 </div>
 <h1 class="font-headline-lg text-headline-lg text-on-surface text-center tracking-tight">Tong Ek Jewelry</h1>
 <p class="font-label-md text-label-md text-secondary tracking-[0.1em] uppercase mt-2">Inventory Management System</p>
 </div>
 <!-- Login Card -->
 <div class="bg-surface-container-lowest luxury-shadow rounded-xl p-8 border border-surface-variant/50 transition-all duration-300">
-<!-- สังเกตที่ id="loginForm" ผมเพิ่มเข้ามาให้ใช้งานผูกกับสคริปต์ได้ -->
-<form id="loginForm" class="space-y-6">
+<form class="space-y-6" onsubmit="event.preventDefault();">
 <!-- Username Field -->
 <div class="space-y-2">
 <label class="font-label-md text-label-md text-on-surface-variant ml-1" for="username">Username or Email</label>
 <div class="relative group">
 <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">person</span>
-<input class="w-full pl-10 pr-4 py-3 rounded-lg border border-surface-variant bg-white focus:ring-1 focus:ring-primary-container focus:border-primary-container outline-none transition-all font-body-sm text-on-surface placeholder:text-outline-variant" id="username" name="username" placeholder="administrator@tongek.com" type="text" required/>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg border border-surface-variant bg-white focus:ring-1 focus:ring-primary-container focus:border-primary-container outline-none transition-all font-body-sm text-on-surface placeholder:text-outline-variant" id="username" name="username" placeholder="administrator@tongek.com" type="text"/>
 </div>
 </div>
 <!-- Password Field -->
@@ -179,7 +158,7 @@
 </div>
 <div class="relative group">
 <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">lock</span>
-<input class="w-full pl-10 pr-4 py-3 rounded-lg border border-surface-variant bg-white focus:ring-1 focus:ring-primary-container focus:border-primary-container outline-none transition-all font-body-sm text-on-surface placeholder:text-outline-variant" id="password" name="password" placeholder="••••••••" type="password" required/>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg border border-surface-variant bg-white focus:ring-1 focus:ring-primary-container focus:border-primary-container outline-none transition-all font-body-sm text-on-surface placeholder:text-outline-variant" id="password" name="password" placeholder="••••••••" type="password"/>
 </div>
 </div>
 <!-- Remember Me & Checkbox -->
@@ -189,8 +168,8 @@
 </div>
 <!-- Sign In Button -->
 <button class="w-full py-4 bg-primary-container text-on-primary-container font-label-md text-label-md uppercase tracking-widest rounded-lg shadow-sm btn-gold-transition flex items-center justify-center gap-2" type="submit">
-<span id="btnText">Sign In</span>
-<span id="btnIcon" class="material-symbols-outlined text-[18px]">login</span>
+<span>Sign In</span>
+<span class="material-symbols-outlined text-[18px]">login</span>
 </button>
 </form>
 </div>
@@ -212,9 +191,9 @@
 <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.05),transparent_40%)]"></div>
 <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(212,175,55,0.05),transparent_40%)]"></div>
 </div>
-<!-- Script for micro-interactions & Redirect -->
+<!-- Script for micro-interactions -->
 <script>
-        // Effect ตอนคลิกปุ่ม
+        // Simple ripple effect for the gold button
         const button = document.querySelector('button[type="submit"]');
         button.addEventListener('click', function(e) {
             let ripple = document.createElement('span');
@@ -229,6 +208,7 @@
             }, 600);
         });
 
+        // Toggle password visibility placeholder (UI logic only)
         const inputs = document.querySelectorAll('input');
         inputs.forEach(input => {
             input.addEventListener('focus', () => {
@@ -238,22 +218,27 @@
                 input.parentElement.parentElement.classList.remove('scale-[1.01]');
             });
         });
-
-        // ฟังก์ชันเมื่อกดปุ่ม Sign In (จำลองการโหลดแล้วเด้งไปหน้า home.html)
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // ป้องกันเว็บ Refresh
-
-            // เปลี่ยนปุ่มเป็นสถานะกำลังโหลด
-            document.getElementById('btnText').textContent = 'Authenticating...';
-            const icon = document.getElementById('btnIcon');
-            icon.textContent = 'progress_activity'; // เปลี่ยนไอคอน
-            icon.classList.add('animate-spin'); // ให้ไอคอนหมุน
-
-            // จำลองเวลาเช็ครหัส 1 วินาที จากนั้นค่อยพาไปหน้า Home
-            setTimeout(() => {
-                window.location.href = 'home.html'; 
-            }, 1000);
-        });
     </script>
-</body>
-</html>
+<style>
+        .ripple {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            border-radius: 50%;
+            animation: ripple-animation 0.6s linear;
+        }
+        @keyframes ripple-animation {
+            from {
+                width: 0px;
+                height: 0px;
+                opacity: 0.5;
+            }
+            to {
+                width: 500px;
+                height: 500px;
+                opacity: 0;
+            }
+        }
+    </style>
+</body></html>
